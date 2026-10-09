@@ -23,8 +23,12 @@ severity; the evidence label only caps it.
 
 | Evidence | Highest severity |
 | --- | --- |
-| `Vendor`, `Specification`, `Research` | `error` |
-| `Practitioner`, `Inference` | `warning`, unless `severity_rationale` records why the rule meets point 1 |
+| `Vendor`, `Specification`, `Research`, `Empirical` | `error` |
+| `Advisory`, `Practitioner`, `Inference` | `warning`, unless `severity_rationale` records why the rule meets point 1 |
+
+The labels are the ones the best-practices pages use: `Advisory` marks an
+open specification or standards body's guidance, `Empirical` a study or
+measured data.
 
 A rule with `contested: true` is always `warning`, and its `positions`
 list each side with its sources.
