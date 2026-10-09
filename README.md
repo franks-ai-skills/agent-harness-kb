@@ -13,7 +13,8 @@ Public links and installation instructions are added at distribution.
 The knowledge base does not run workers. Its planned consumer, Harness Forge,
 has adopted the owner-approved `best-effort-v1` policy for workers in
 Claude Code and Codex: complete tool absence and file/context/network
-isolation are not guaranteed. See the sibling
-[Forge README](../harness-forge/README.md#worker-isolation-limitations).
+isolation are not guaranteed. See the local sibling README at
+`../harness-forge/README.md`, section `Worker isolation limitations`.
+Public cross-repository links will be added at distribution.
 This runtime-policy decision does not change the researched KB rules or
 turn an unproven security claim into a verified fact.
