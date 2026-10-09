@@ -3,8 +3,8 @@
 This repository supplies knowledge; it does not manage model accounts.
 Every agent must keep public guidance independent of the project owner's
 aliases, profile paths, plugins and shell setup. Forge assumes standard
-vendor CLIs, vendor-default account locations and an existing subscription
-login, with temporary worker restrictions and documented isolation gaps.
+vendor CLIs, vendor-default account locations and the user's existing
+login (it asks before continuing with an API-key login), with temporary worker restrictions and documented isolation gaps.
 Owner-specific setup is a temporary local-development exception only;
 in the current sibling workspace its instructions are at
 `../playground/plans/harness-forge-local-development.md`.
