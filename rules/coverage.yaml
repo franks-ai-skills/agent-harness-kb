@@ -1,0 +1,3 @@
+# Which page sections were swept for rules, and what became of each item.
+# T5 fills this while extracting rules from docs/.
+pages: []
