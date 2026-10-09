@@ -1,8 +1,13 @@
 # Agent Harness KB
 
-Local bootstrap for the researched knowledge base used by Harness Forge.
-The research remains in the sibling playground repository until Task 5.
-This checkout contains no extracted rules or migrated research yet.
+Researched knowledge base on configuring coding-agent harnesses (Claude
+Code, Codex, OpenCode), and the rules Harness Forge extracts from it.
+
+- `docs/`: the research. Start at `docs/overview.md`.
+- `rules/`, `checks/catalog.yaml`, `schemas/`, `policy/severity.md`:
+  extracted rules, checker catalog, formats and severity policy.
+- `kb-manifest.json`: KB version and the migration record of the
+  research copied from playground on 2026-10-09.
 
 Implementation follows playground's
 [approved plan](../playground/plans/2026-10-07-harness-forge-thin-slice.md).
