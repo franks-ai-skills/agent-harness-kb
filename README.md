@@ -18,3 +18,9 @@ isolation are not guaranteed. See the local sibling README at
 Public cross-repository links will be added at distribution.
 This runtime-policy decision does not change the researched KB rules or
 turn an unproven security claim into a verified fact.
+
+Forge's public account contract assumes standard vendor CLIs and an
+existing subscription login at vendor-default locations. Temporary worker
+restrictions remain required, with their gaps documented. The owner's
+personal configuration is only a temporary local-development exception;
+it is not a KB recommendation, public dependency or installation step.
