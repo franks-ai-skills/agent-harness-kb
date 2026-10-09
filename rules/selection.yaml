@@ -967,9 +967,14 @@ rules:
   checker: selection.match
   params:
     when:
-      eq:
-      - event_without_agent
-      - true
+      all:
+      - not:
+          eq:
+          - job
+          - one-step
+      - eq:
+        - event_without_agent
+        - true
     implies:
       control:
         id: event-gate
@@ -1000,16 +1005,21 @@ rules:
   checker: selection.match
   params:
     when:
-      any:
-      - eq:
-        - must_survive_compromise
-        - required
-      - eq:
-        - who_disables
-        - admin
-      - eq:
-        - irreversible
-        - true
+      all:
+      - not:
+          eq:
+          - job
+          - one-step
+      - any:
+        - eq:
+          - must_survive_compromise
+          - required
+        - eq:
+          - who_disables
+          - admin
+        - eq:
+          - irreversible
+          - true
     implies:
       control:
         id: compromise-resistant-gate
