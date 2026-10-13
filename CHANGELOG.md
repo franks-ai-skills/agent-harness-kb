@@ -14,7 +14,7 @@ First release.
   source commit and the hash of every moved file.
 - `rules/`: rules extracted for Harness Forge's skills slice: skills
   (30), security (5), outside controls (12) and mechanism selection
-  (120), with the page coverage in `rules/coverage.yaml`.
+  (68), with the page coverage in `rules/coverage.yaml`.
 - `checks/catalog.yaml`, `schemas/` and `policy/`: the checker catalog,
   the JSON Schema formats of every rule file and the severity policy.
 - `tools/validate.py`: validates rules, catalog, coverage and links.

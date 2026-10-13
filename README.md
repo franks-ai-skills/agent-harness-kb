@@ -9,8 +9,9 @@ Code, Codex, OpenCode), and the rules Harness Forge extracts from it.
 - `kb-manifest.json`: KB version and the migration record of the
   research copied from playground on 2026-10-09.
 
-Implementation follows playground's
-[approved plan](../playground/plans/2026-10-07-harness-forge-thin-slice.md).
+Implementation follows the approved plan in the playground repository,
+`plans/2026-10-07-harness-forge-thin-slice.md` (a local path until the
+public links are added).
 Public links and installation instructions are added at distribution.
 
 ## Forge worker isolation gap
