@@ -1,0 +1,2 @@
+# The global ignore pattern coverage*.json would hide this schema.
+!schemas/coverage.schema.json
