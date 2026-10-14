@@ -39,5 +39,7 @@ files it generates (`rules/skills.yaml`, `rules/security.yaml`,
 `rules/outside-controls.yaml` and `rules/selection.yaml`) are also
 licensed under the
 [Harness Forge Generated Output Exception](LICENSE-OUTPUT-EXCEPTION),
-which their notice names. Contributions:
+which their notice names. The pages in `docs/` quote their sources;
+the quoted passages remain their authors' and are not licensed by this
+repository. Contributions:
 [CONTRIBUTING.md](CONTRIBUTING.md).
