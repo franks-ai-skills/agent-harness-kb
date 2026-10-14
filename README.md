@@ -31,3 +31,13 @@ cost extra, and Forge asks before continuing with one. Temporary worker
 restrictions remain required, with their gaps documented. The owner's
 personal configuration is only a temporary local-development exception;
 it is not a KB recommendation, public dependency or installation step.
+
+## License
+
+[AGPL-3.0-only](LICENSE). The rule files Harness Forge copies into the
+files it generates (`rules/skills.yaml`, `rules/security.yaml`,
+`rules/outside-controls.yaml` and `rules/selection.yaml`) are also
+licensed under the
+[Harness Forge Generated Output Exception](LICENSE-OUTPUT-EXCEPTION),
+which their notice names. Contributions:
+[CONTRIBUTING.md](CONTRIBUTING.md).
