@@ -28,7 +28,7 @@ from it.
   `tools/validate.py`.
 - This repository is the authoritative copy since 2026-10-09. The
   research came from the playground commit recorded in `kb-manifest.json`;
-  playground's copy is frozen and not edited.
+  playground removed its copy after this repository was published.
 
 ## Rules
 

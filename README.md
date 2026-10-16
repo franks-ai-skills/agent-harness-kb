@@ -9,23 +9,25 @@ Code, Codex, OpenCode), and the rules Harness Forge extracts from it.
 - `kb-manifest.json`: KB version and the migration record of the
   research copied from playground on 2026-10-09. Its source commit is
   the one playground's history rewrite of 2026-10-16 gave the copied
-  commit `a2892b6`; playground's `plans/history-rewrite-2026-10-16.md`
+  commit `a2892b6`; playground's
+  [`plans/history-rewrite-2026-10-16.md`](https://github.com/franks-ai-skills/playground/blob/ai-stuff/plans/history-rewrite-2026-10-16.md)
   maps both. `history-rewrite-2026-10-16.md` maps this repository's own
   rewritten commits.
 
-Implementation follows the approved plan in the playground repository,
-`plans/2026-10-07-harness-forge-thin-slice.md` (a local path until the
-public links are added).
-Public links and installation instructions are added at distribution.
+Implementation follows the approved
+[plan](https://github.com/franks-ai-skills/playground/blob/ai-stuff/plans/2026-10-07-harness-forge-thin-slice.md)
+in the playground repository. Harness Forge pins a snapshot of this
+repository; install Forge as its
+[README](https://github.com/franks-ai-skills/harness-forge#installation)
+describes.
 
 ## Forge worker isolation gap
 
-The knowledge base does not run workers. Its planned consumer, Harness Forge,
+The knowledge base does not run workers. Its consumer, Harness Forge,
 has adopted the owner-approved `best-effort-v1` policy for workers in
 Claude Code and Codex: complete tool absence and file/context/network
-isolation are not guaranteed. See the local sibling README at
-`../harness-forge/README.md`, section `Worker isolation limitations`.
-Public cross-repository links will be added at distribution.
+isolation are not guaranteed. See Forge's
+[worker isolation limitations](https://github.com/franks-ai-skills/harness-forge#worker-isolation-limitations).
 This runtime-policy decision does not change the researched KB rules or
 turn an unproven security claim into a verified fact.
 

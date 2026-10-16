@@ -4,7 +4,7 @@ The version is `kb_version` in `kb-manifest.json`. Harness Forge pins a
 snapshot of one commit and records that commit in its own
 `snapshot/kb-manifest.json`.
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-10-16)
 
 First release.
 
