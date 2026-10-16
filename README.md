@@ -7,7 +7,11 @@ Code, Codex, OpenCode), and the rules Harness Forge extracts from it.
 - `rules/`, `checks/catalog.yaml`, `schemas/`, `policy/severity.md`:
   extracted rules, checker catalog, formats and severity policy.
 - `kb-manifest.json`: KB version and the migration record of the
-  research copied from playground on 2026-10-09.
+  research copied from playground on 2026-10-09. Its source commit is
+  the one playground's history rewrite of 2026-10-16 gave the copied
+  commit `a2892b6`; playground's `plans/history-rewrite-2026-10-16.md`
+  maps both. `history-rewrite-2026-10-16.md` maps this repository's own
+  rewritten commits.
 
 Implementation follows the approved plan in the playground repository,
 `plans/2026-10-07-harness-forge-thin-slice.md` (a local path until the
