@@ -4,6 +4,14 @@ The version is `kb_version` in `kb-manifest.json`. Harness Forge pins a
 snapshot of one commit and records that commit in its own
 `snapshot/kb-manifest.json`.
 
+## Unreleased
+
+- `checks/catalog.yaml`: Harness Forge reads Markdown with the CommonMark
+  parser markdown-it-py instead of its own scanner, so the checkers that
+  read Markdown changed behavior: `links.relative-references` and
+  `skills.reference-depth` 1.4.0, `skills.portable-body` 1.2.0,
+  `outside.readme-coverage` 1.2.0.
+
 ## 0.1.0 (2026-10-16)
 
 First release.
