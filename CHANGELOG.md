@@ -6,6 +6,17 @@ snapshot of one commit and records that commit in its own
 
 ## Unreleased
 
+- `rules/selection.yaml`: every recommended control lists each of the
+  seven gate conditions its family needs. Code owners on the agent's
+  configuration gain the bypass, approval, broader-credential and plan
+  conditions; merge rules and the event gate gain the broader-credential
+  condition, and the event gate the definition conditions; the
+  compromise-resistant gate gains the approval and check conditions; and
+  outer isolation the bypass condition.
+- `rules/outside-controls.yaml`: `outside.merge.requester-cannot-approve`,
+  `outside.ci.source-pinned` and `outside.ci.workflow-protected` say when
+  they apply, since a generic or mixed gate need not use approval, checks
+  or CODEOWNERS.
 - `checks/catalog.yaml`: Harness Forge reads Markdown with the CommonMark
   parser markdown-it-py instead of its own scanner, so the checkers that
   read Markdown changed behavior: `links.relative-references` and
