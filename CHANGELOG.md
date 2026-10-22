@@ -6,6 +6,16 @@ snapshot of one commit and records that commit in its own
 
 ## Unreleased
 
+- `rules/selection.yaml`: a part fact `side_effects` asks whether a
+  part changes external state, such as committing, pushing, deploying,
+  editing an issue or sending a message, or needs timing the model
+  should not choose. When it holds, a model-invoked skill, instructions
+  and a subagent are ruled out and a user-invoked skill is preferred,
+  as for an irreversible action, but without the outside gate. Before,
+  selection could recommend a model-invoked skill for a reversible
+  change that `skills.invocation.side-effects-user-invoked` then failed.
+  Every selection fixture answers the fact; two new fixtures cover a
+  user-started and a model-started side effect.
 - `rules/selection.yaml`: every recommended control lists each of the
   seven gate conditions its family needs. Code owners on the agent's
   configuration gain the bypass, approval, broader-credential and plan
