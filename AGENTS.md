@@ -68,3 +68,14 @@ Do not copy credentials, change login state or add API-credit fallbacks.
 
 Use Conventional Commits and record AI attribution as final-paragraph
 `Assisted-by: <model> (code generation)` or `(code review)` trailers.
+
+## Pull requests and merging
+
+Changes reach `main` only through a pull request, merged with a merge
+commit (the only method this repository allows). Keep the PR
+description in step with what the PR contains. Merge only after the
+repository's required checks (`tools/validate.py`) pass and an
+independent review of the latest pushed head finds the PR ready; a
+push after that review needs a new one. The owner's AI agents (Claude
+implementing, Codex planning and reviewing) follow the working mode in
+[playground's AGENTS.md](https://github.com/franks-ai-skills/playground/blob/ai-stuff/AGENTS.md#working-mode-claude-and-codex-owner-2026-10-22).
