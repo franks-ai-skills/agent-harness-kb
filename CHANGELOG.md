@@ -1,10 +1,21 @@
 # Changelog
 
 The version is `kb_version` in `kb-manifest.json`. Harness Forge pins a
-snapshot of one commit and records that commit in its own
+snapshot of one released version and records its commit in its own
 `snapshot/kb-manifest.json`.
 
-## Unreleased
+Each pull request that changes `docs/`, `rules/`, `schemas/`,
+`policy/`, `checks/`, `fixtures/` or `kb-manifest.json` raises
+`kb_version` and adds a dated section for that version at the top of
+this file. During 0.x, changed facts, rules, questions, checker
+behavior or versions, and schemas raise the minor version; editorial or
+metadata corrections with no such change raise the patch version.
+Changes outside those paths need no new version. After the merge, the
+merge commit is tagged `v<version>` and gets a GitHub release whose
+notes are its section here, before the next pull request that changes
+those paths merges. Release tags are never moved.
+
+## 0.2.0 (2026-10-23)
 
 - `rules/selection.yaml`: a part fact `side_effects` asks whether a
   part changes external state, such as committing, pushing, deploying,
@@ -16,6 +27,17 @@ snapshot of one commit and records that commit in its own
   change that `skills.invocation.side-effects-user-invoked` then failed.
   Every selection fixture answers the fact; two new fixtures cover a
   user-started and a model-started side effect.
+- `rules/skills.yaml`, `rules/selection.yaml`: the skill layout rules
+  apply by where a skill lives. A part fact `skill_home` (`repository`
+  or `plugin`, derived by Forge, never asked) limits
+  `skills.portable.layout` to a skill in `.agents/skills/`. The new
+  rule `skills.portable.plugin-layout` (checker `links.plugin-layout`
+  1.0.0) requires a plugin skill in `skills/<name>/` under a plugin
+  root that holds the `plugin.json` manifest Codex reads, or
+  `.codex-plugin/plugin.json`. Before, a skill shipped in a plugin
+  failed the repository layout rule. `docs/concepts/skills.md` says
+  that a plugin skill needs no `.agents/skills/` copy or
+  `.claude/skills/` link; two new fixtures cover the plugin layout.
 - `rules/selection.yaml`: every recommended control lists each of the
   seven gate conditions its family needs. Code owners on the agent's
   configuration gain the bypass, approval, broader-credential and plan
@@ -35,7 +57,8 @@ snapshot of one commit and records that commit in its own
 
 ## 0.1.0 (2026-10-16)
 
-First release.
+First release, tagged `v0.1.0` afterwards at `9a9063d`, the commit
+Harness Forge pinned at publication.
 
 - `docs/`: the knowledge base researched on 2026-10-04 against Claude
   Code 2.1.289, codex-cli 0.159.2 and OpenCode 1.18.34, moved from the
