@@ -1,5 +1,5 @@
 {
-  "kb_version": "0.1.0",
+  "kb_version": "0.2.0",
   "migration": {
     "files": {
       "docs/README.md": "cae6e58a0dee9165c37edb397dcb71cec4ac82ca3f59b1a354fb92dcc1ba7086",
