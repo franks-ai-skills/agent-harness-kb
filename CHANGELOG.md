@@ -1,8 +1,19 @@
 # Changelog
 
 The version is `kb_version` in `kb-manifest.json`. Harness Forge pins a
-snapshot of one commit and records that commit in its own
+snapshot of one released version and records its commit in its own
 `snapshot/kb-manifest.json`.
+
+Each pull request that changes `docs/`, `rules/`, `schemas/`,
+`policy/`, `checks/`, `fixtures/` or `kb-manifest.json` raises
+`kb_version` and adds a dated section for that version at the top of
+this file. During 0.x, changed facts, rules, questions, checker
+behavior or versions, and schemas raise the minor version; editorial or
+metadata corrections with no such change raise the patch version.
+Changes outside those paths need no new version. After the merge, the
+merge commit is tagged `v<version>` and gets a GitHub release whose
+notes are its section here, before the next pull request that changes
+those paths merges. Release tags are never moved.
 
 ## Unreleased
 
@@ -35,7 +46,8 @@ snapshot of one commit and records that commit in its own
 
 ## 0.1.0 (2026-10-16)
 
-First release.
+First release, tagged `v0.1.0` afterwards at `9a9063d`, the commit
+Harness Forge pinned at publication.
 
 - `docs/`: the knowledge base researched on 2026-10-04 against Claude
   Code 2.1.289, codex-cli 0.159.2 and OpenCode 1.18.34, moved from the

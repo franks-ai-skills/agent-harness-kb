@@ -38,6 +38,13 @@ from it.
   became, or why it is not a rule.
 - Rules name checkers from `checks/catalog.yaml` by id, never a script
   path. The checker implementations ship in Harness Forge.
+- A pull request that changes `docs/`, `rules/`, `schemas/`, `policy/`,
+  `checks/`, `fixtures/` or `kb-manifest.json` raises `kb_version` and
+  adds a dated section to `CHANGELOG.md`, which states the version
+  policy. After the merge, tag the merge commit `v<version>` and create
+  a GitHub release from that section before the next such pull request
+  merges. Harness Forge pins only released versions. Never move a
+  release tag.
 
 ## Repository layout rules
 
@@ -74,7 +81,8 @@ Use Conventional Commits and record AI attribution as final-paragraph
 Changes reach `main` only through a pull request, merged with a merge
 commit (the only method this repository allows). Keep the PR
 description in step with what the PR contains. Merge only after the
-repository's required checks (`tools/validate.py`) pass and an
+repository's required checks (`tools/validate.py` and its tests,
+`tools/test_validate.py`) pass and an
 independent review of the latest pushed head finds the PR ready; a
 push after that review needs a new one. The owner's AI agents (Claude
 implementing, Codex planning and reviewing) follow the working mode in

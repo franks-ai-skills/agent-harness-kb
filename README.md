@@ -6,6 +6,8 @@ Code, Codex, OpenCode), and the rules Harness Forge extracts from it.
 - `docs/`: the research. Start at `docs/overview.md`.
 - `rules/`, `checks/catalog.yaml`, `schemas/`, `policy/severity.md`:
   extracted rules, checker catalog, formats and severity policy.
+- `CHANGELOG.md`: the released versions and the version policy. Each
+  release is tagged `v<version>`.
 - `kb-manifest.json`: KB version and the migration record of the
   research copied from playground on 2026-10-09. Its source commit is
   the one playground's history rewrite of 2026-10-16 gave the copied
@@ -16,8 +18,8 @@ Code, Codex, OpenCode), and the rules Harness Forge extracts from it.
 
 Implementation follows the approved
 [plan](https://github.com/franks-ai-skills/playground/blob/ai-stuff/plans/2026-10-07-harness-forge-thin-slice.md)
-in the playground repository. Harness Forge pins a snapshot of this
-repository; install Forge as its
+in the playground repository. Harness Forge pins a snapshot of a
+released version of this repository; install Forge as its
 [README](https://github.com/franks-ai-skills/harness-forge#installation)
 describes.
 
