@@ -1,7 +1,8 @@
 """Validate this KB with Harness Forge's validator, and check its release.
 
-Usage, from the KB root, with Forge's locked environment:
-    ../harness-forge/.venv/bin/python tools/validate.py [--forge ../harness-forge]
+Usage, from the KB root, with Python 3.11 or newer and no installed packages
+(Forge's validator brings its bundled dependencies):
+    python3 -I -S tools/validate.py [--forge ../harness-forge]
 
 Forge owns the schemas; the copies in schemas/ must be byte-identical.
 The release check is this repository's own (the policy in CHANGELOG.md):
