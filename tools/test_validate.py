@@ -1,7 +1,7 @@
 """Tests for the release check in tools/validate.py.
 
-Run from the KB root with Forge's locked environment:
-    ../harness-forge/.venv/bin/python tools/test_validate.py
+Run from the KB root with Python 3.11 or newer and no installed packages:
+    python3 -I -S tools/test_validate.py
 """
 
 import importlib.util

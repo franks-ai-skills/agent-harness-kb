@@ -15,6 +15,15 @@ merge commit is tagged `v<version>` and gets a GitHub release whose
 notes are its section here, before the next pull request that changes
 those paths merges. Release tags are never moved.
 
+## 0.4.0 (2026-10-24)
+
+- `schemas/`: the six schema copies follow Harness Forge's move from JSON
+  Schema Draft 2020-12 to Draft-07 (harness-forge#56): `prefixItems`
+  becomes array-form `items` with `additionalItems`, `$defs` becomes
+  `definitions`, and each schema refers to itself by its absolute `$id`.
+  The documents they describe are unchanged. Minor, because the schemas
+  changed.
+
 ## 0.3.0 (2026-10-24)
 
 - `docs/best-practices/plugins.md` (practice 3 and the release
