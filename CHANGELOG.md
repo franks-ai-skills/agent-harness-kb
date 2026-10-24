@@ -15,6 +15,17 @@ merge commit is tagged `v<version>` and gets a GitHub release whose
 notes are its section here, before the next pull request that changes
 those paths merges. Release tags are never moved.
 
+## 0.3.0 (2026-10-24)
+
+- `docs/best-practices/plugins.md` (practice 3 and the release
+  checklist) and `docs/guide/plugins.md`: plugin release tags. The pages
+  asked for a `<plugin>--v<version>` tag on every release. Updates
+  follow the version, so ordinary marketplace updates impose no
+  tag-naming requirement; Claude Code resolves git-backed plugin
+  dependency ranges against `<plugin>--v<version>` tags, which is when
+  its dependency documentation asks for them. Minor,
+  because the guidance changed meaning.
+
 ## 0.2.0 (2026-10-23)
 
 - `rules/selection.yaml`: a part fact `side_effects` asks whether a
