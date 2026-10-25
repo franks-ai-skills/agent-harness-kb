@@ -15,6 +15,13 @@ merge commit is tagged `v<version>` and gets a GitHub release whose
 notes are its section here, before the next pull request that changes
 those paths merges. Release tags are never moved.
 
+## 0.5.0 (2026-10-24)
+
+- `checks/catalog.yaml`: `skills.name-format` is version 1.1.0. Harness
+  Forge's checker matches the whole name, so a name with a trailing line
+  break is refused by the pattern itself (harness-forge#51). Minor,
+  because a checker version changed.
+
 ## 0.4.0 (2026-10-24)
 
 - `schemas/`: the six schema copies follow Harness Forge's move from JSON
