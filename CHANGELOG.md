@@ -15,6 +15,35 @@ merge commit is tagged `v<version>` and gets a GitHub release whose
 notes are its section here, before the next pull request that changes
 those paths merges. Release tags are never moved.
 
+## 0.6.0 (2026-10-25)
+
+- Security guidance for skills (#11), researched from newly fetched
+  sources (`docs/research-notes/agent-harness-security-2026-10-25.md`)
+  in `docs/guide/security.md`: repository metadata (commit messages,
+  author names and emails, branch names) is untrusted input; untrusted
+  material embedded in output sits in a container it cannot end, which
+  is syntax containment, not protection from its instructions, and a
+  prompt saved for another session states its own trust boundary; write
+  destinations are resolved, links included, and a check before the
+  write is not race-free containment; credential files the task does not
+  need are not read. Tag and file names were not found as untrusted
+  input in the fetched sources and are not claimed.
+- `rules/security.yaml`: new `security.writes.within-boundary`,
+  `security.embedded-content.contained` and
+  `security.secrets.no-unneeded-reads` (should, warning, judged), and
+  `security.untrusted-input.as-data` names repository metadata.
+  `docs/sources.md` adds `cwe.mitre.org` and `spec.commonmark.org`.
+- `rules/selection.yaml`: every outside control has a readable `name`
+  and the `reason` it is recommended, from the guide sections its rule
+  cites (harness-forge#53). `checks/catalog.yaml`: `selection.match`
+  1.6.0 requires both; `outside.readme-coverage` 1.3.0 reads Harness
+  Forge's readable entry form beside the earlier one.
+- OpenCode's default for `.env` reads is `ask` (approval first), not
+  `deny`: corrected on its vendor page against the current
+  documentation, and in the permissions concept and guide pages.
+- Minor, because rules, a checker's parameters and checker versions
+  changed.
+
 ## 0.5.0 (2026-10-24)
 
 - `checks/catalog.yaml`: `skills.name-format` is version 1.1.0. Harness
