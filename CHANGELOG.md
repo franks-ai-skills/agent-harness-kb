@@ -38,6 +38,9 @@ those paths merges. Release tags are never moved.
   cites (harness-forge#53). `checks/catalog.yaml`: `selection.match`
   1.6.0 requires both; `outside.readme-coverage` 1.3.0 reads Harness
   Forge's readable entry form beside the earlier one.
+- OpenCode's default for `.env` reads is `ask` (approval first), not
+  `deny`: corrected on its vendor page against the current
+  documentation, and in the permissions concept and guide pages.
 - Minor, because rules, a checker's parameters and checker versions
   changed.
 

@@ -188,9 +188,10 @@ URLs and browser output. Prompts and “no write tools” are supporting
 controls, not sufficient confidentiality boundaries.
 
 **[Vendor]** The harnesses' own examples and defaults keep `.env` files
-out of reads: Claude Code's settings example denies `Read(./.env)` and
-`Read(./.env.*)`, OpenCode denies `*.env` and `*.env.*` but allows
-`*.env.example` by default, and a Codex permission profile can deny
+out of unattended reads: Claude Code's settings example denies
+`Read(./.env)` and `Read(./.env.*)`, OpenCode asks for approval before
+reading `*.env` and `*.env.*` but allows `*.env.example` by default, and
+a Codex permission profile can deny
 `**/*.env` ([Claude Code settings](https://code.claude.com/docs/en/settings),
 [OpenCode](../vendors/opencode/permissions-and-sandbox.md#keys),
 [Codex](../vendors/codex/permissions-and-sandbox.md#example)). **[Inference]**

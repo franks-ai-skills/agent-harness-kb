@@ -84,9 +84,11 @@ wrote it, so it has to state itself which part is untrusted material.
 - Claude Code's settings example shows deny rules "Read(./.env)" and
   "Read(./.env.*)" to "stop it reading `.env` files"
   ([settings](https://code.claude.com/docs/en/settings)).
-- OpenCode's default `read` permission denies `*.env` and `*.env.*` and
-  allows `*.env.example`
-  ([OpenCode permissions](../vendors/opencode/permissions-and-sandbox.md));
+- OpenCode: "`read` is `"allow"`, but `.env` files require approval by
+  default", with `*.env` and `*.env.*` set to `ask` and `*.env.example`
+  to `allow` ([OpenCode permissions](https://opencode.ai/docs/permissions/#defaults));
+  the KB's vendor page said `deny` until this pass and was corrected
+  ([KB vendor page](../vendors/opencode/permissions-and-sandbox.md));
   a Codex permission profile can deny `**/*.env`
   ([Codex permissions](../vendors/codex/permissions-and-sandbox.md)).
 
